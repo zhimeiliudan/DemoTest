@@ -19,3 +19,6 @@ deploy:
   file: app/build/outputs/apk/app-release-unsigned.apk
   on:
     repo: zhimeiliudan/DemoTest
+
+
+
