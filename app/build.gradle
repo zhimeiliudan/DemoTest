@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.liudan.demotest"
-        minSdkVersion 15
+        minSdkVersion 18
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -15,9 +15,40 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.releaseConfig
         }
     }
+
+
+    //签名信息
+//    signingConfigs {
+//        releaseConfig {
+//            storeFile file("../xx.keystore")
+//            storePassword "zhimei2014"
+//            keyAlias "key_alias"
+//            keyPassword "zhimei2014"
+//        }
+//    }
+
+    // 在travis上配置环境变量
+//    signingConfigs {
+//        release {
+//            storeFile file(".kesco.keystore")
+//            storePassword System.getenv("KEYSTORE_PASS")
+//            keyAlias System.getenv("ALIAS_NAME")
+//            keyPassword System.getenv("ALIAS_PASS")
+//        }
+//    }
+
+    //本地把签名信息设置到gradle.propertis
+    releaseConfig {
+        storeFile file(".demo.jks")
+        storePassword project.hasProperty("KEYSTORE_PASS") ? KEYSTORE_PASS : System.getenv("KEYSTORE_PASS")
+        keyAlias project.hasProperty("ALIAS_NAME") ? ALIAS_NAME : System.getenv("ALIAS_NAME")
+        keyPassword project.hasProperty("ALIAS_PASS") ? ALIAS_PASS : System.getenv("ALIAS_PASS")
+    }
 }
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
