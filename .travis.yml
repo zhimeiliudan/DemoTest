@@ -10,15 +10,10 @@ android:
   - sys-img-x86-android-17
 git:
   submodules: false
-before_install:    
-- openssl aes-256-cbc -K $encrypted_b6c51c30984d_key -iv $encrypted_b6c51c30984d_iv
-  -in demo.jks.enc -out demo.jks -d
-- sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-- git submodule init && git submodule update
+
 script:
 - ./gradlew assembleRelease
-before_deploy:
-- mv app/build/outputs/apk/app-release.apk app/build/outputs/apk/slideback.apk
+
 deploy:
   provider: releases
   user: zhimeiliudan
