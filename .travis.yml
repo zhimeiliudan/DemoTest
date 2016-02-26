@@ -12,12 +12,9 @@ android:
     - emulator -avd test -no-audio -no-window &
     - android-wait-for-emulator
 
-  script:
-    - ./gradlew assembleRelease
+ # script:
+ #   - ./gradlew assembleRelease
 
-#    script:
- #     - android list targets
- #     - echo no | android create avd --force -n test -t android-23 --abi arme
 before_install:
 - openssl aes-256-cbc -K $encrypted_b6c51c30984d_key -iv $encrypted_b6c51c30984d_iv
   -in demo.jks.enc -out demo.jks -d
