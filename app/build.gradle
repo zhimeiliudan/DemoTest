@@ -28,7 +28,7 @@ android {
     android.applicationVariants.all {
         variant -> variant.outputs.each {
 //            output -> output.outputFile = new File(output.outputFile.parent, "demo_" + defaultConfig.versionCode +  "_v" + defaultConfig.versionName +"_"+buildType.name+ ".apk");
-            output -> output.outputFile = new File(output.outputFile.parent, "demo1.0.1apk");
+            output -> output.outputFile = new File(output.outputFile.parent, "demo1.0.1.apk");
         }
     }
     //签名信息
