@@ -33,7 +33,7 @@ deploy:
   provider: releases
   api_key:
     secure: IJ+YolFlOJwXci0unwVpbQxLuKOAHOYqSoqpRVTtmKC2QzAJ48oBlhqaF5lnmq0vrP2Wfs0g4vj5KE2ciJKLDE9Uitx29Kw/w8j0W57JO8JCVm15m2vQ07TFWTO9bg/+nsVweNYRITMKw6+soqaMrzXmCz/S0hsDcFqbVakvvQgIhoKMIwC3QG+eCe/8xxDt3v7RbTqxn/y3EMeizC65haxy3SfMCaor+5fYZVfWVzyYBFvMdnrvdgw3nC56HYgTAgyXpHyfQ21DcnbVhfPRMYCVEp0uGPOvmAgFBrzOCFxmIQkCDx7KBmR3j73kQocCdamx5QC4/Ge9d1CSIEezCxQ+DlGbHYThPTnwB584kuMx12mdbhK9tCqtB72RY9MskTQQ/prNxt2b+doo4eJApHWF2c709k1Lb8aR5FD0Yq54oT2TPnNUxEoAIh/TX16bMh5GkqB2Yn8xA8NcEKARCHVCyIul3Yata2EFK7Q0VYrhOmFpRyFLrSdY1mM+zxtc1bgT8i9/6XyG5oLzVTKFVra2UtmrgsG8XUVPtEpF2gu5uNuCL3mlEpFEn/CMOHRAG9sOqQYb+APIBzMCGc2jcQ2q3NaPkGERtngoXYUscNXhWumzKeuoq86DOxRKHPtiFrbxyJSrSU6W0vPJyYhTT4nOUOVqJOFz1bBjqwmlAWo=
-  file: app/build/outputs/apk/app-release-unsigned.apk
+  file: app/build/outputs/apk/app-release-unsigned2.apk
   skip_cleanup: true
   on:
     repo: zhimeiliudan/DemoTest
