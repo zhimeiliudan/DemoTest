@@ -20,8 +20,8 @@ before_deploy:
 #  - ./gradlew connectedAndroidTest
 
 
-#  script:
- #   - ./gradlew assembleRelease
+script:
+  - ./gradlew assembleRelease
 
 
  #   script: ./gradlew build assembleRelease --stacktrace
