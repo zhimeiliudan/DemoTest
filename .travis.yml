@@ -1,22 +1,19 @@
 language: android
 android:
-      components:
-      - build-tools-23.0.1
-      - android-23
-      - extra-android-support
-      - extra-android-m2repository
-      - sys-img-armeabi-v7a-android-19
+  components:
+  - build-tools-23.0.1
+  - android-23
+  - extra-android-support
+  - extra-android-m2repository
+  - sys-img-armeabi-v7a-android-19
 
-    before_script:
-      - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
-      - emulator -avd test -no-audio -no-window &
-      - android-wait-for-emulator
+before_script:
+  - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+  - emulator -avd test -no-audio -no-window &
+  - android-wait-for-emulator
 
-    before_deploy:
-      - ls -al app/build/outputs
-
-
-
+before_deploy:
+  - ls -al app/build/outputs
 
 #script:
 #  - android list target
