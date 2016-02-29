@@ -37,7 +37,7 @@ deploy:
   skip_cleanup: true
   on:
     repo: zhimeiliudan/DemoTest
-    tags: true
+#    tags: true
         all_branches: true
 
 
