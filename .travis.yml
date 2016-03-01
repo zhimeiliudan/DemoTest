@@ -7,10 +7,10 @@ android:
   - extra-android-m2repository
   - sys-img-armeabi-v7a-android-19
 
-before_script:
-  - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
-  - emulator -avd test -no-audio -no-window &
-  - android-wait-for-emulator
+#before_script:
+#  - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+#  - emulator -avd test -no-audio -no-window &
+#  - android-wait-for-emulator
 
 before_deploy:
   - ls -al app/build/outputs
@@ -22,9 +22,6 @@ before_deploy:
 
 script:
   - ./gradlew assembleRelease
-
-
- #   script: ./gradlew build assembleRelease --stacktrace
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_b6c51c30984d_key -iv $encrypted_b6c51c30984d_iv
